@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <section>
+    <form action="" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Name" required size="15" autofocus>
+        <label for="email">E-Mail:</label>
+        <input type="email" name="email" id="email" placeholder="email" required>
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" name="pw" pattern=".{8,}" title="At least 8 characters" placeholder="Password">
+        <label for="tel">Telefon:</label>
+        <input type="tel" name="tel" id="tel" placeholder="telefon">
+        <input type="checkbox" name="beginner" id="beginner">
+        <label for="beginner">I am a Beginner</label>
+        <label for="charName">Character Name:</label>
+        <input type="text" name="charName" id="charName" placeholder="character Name">
+        <label for="class">Class:</label>
+        <select id="class" name="class" required>
+          <option value="" disabled selected>Choose a Class:</option>
+          <option value="arteficer">Arteficer</option>
+          <option value="barbarian">Barbarian</option>
+          <option value="bard">Bard</option>
+          <option value="cleric">Cleric</option>
+          <option value="druid">Druid</option>
+          <option value="fighter">Fighter</option>
+          <option value="monk">Monk</option>
+          <option value="paladin">Paladin</option>
+          <option value="ranger">Ranger</option>
+          <option value="rogue">Rogue</option>
+          <option value="sorcerer">Sorcerer</option>
+          <option value="warlock">Warlock</option>
+          <option value="wizard">Wizard</option>
+        </select>
+        <label for="level">Character Level:</label>
+        <input type="number" name="level" id="level" min="1" max="20" required>
+
+        <p>Alignment:</p>
+        <fieldset>
+          <legend>ethics</legend>
+          <input type="radio" name="ethic" id="lawfull" value="lawfull">
+          <label for="lawfull">Lawfull</label>
+          <input type="radio" name="ethic" id="ethicNeutral" value="neutral">
+          <label for="ethicNeutral">Neutral</label>
+          <input type="radio" name="ethic" id="chaotic" value="chaotic">
+          <label for="chaotic">Chaotic</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>morality</legend>
+          <input type="radio" name="moral" id="good" value="good">
+          <label for="good">Good</label>
+          <input type="radio" name="moral" id="moralNeutral" value="neutral">
+          <label for="moralNeutral">Neutral</label>
+          <input type="radio" name="moral" id="evil" value="evil">
+          <label for="evil">Evil</label>
+        </fieldset>
+        <label for="notes">Additional Notes:</label>
+        <textarea name="notes" id="notes"></textarea>
+
+        <label for="startDate">prefered Start Date:</label>
+        <input type="date" name="startDate" id="startDate" required>
+        <button type="submit">Submit</button>
+    </form>
+  </section>
+
+</body>
+
+</html>
