@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/slideShow.js" defer></script>
 </head>
+
 <body>
 
   <header>
@@ -21,103 +23,147 @@
   <main>
     <section>
       <h2>What is it</h2>
+      <div class="video">
+        <iframe class="videocontent" src="https://www.youtube.com/embed/BgvHNlgmKro" allowfullscreen title="DND-Video"
+          frameborder="0"></iframe>
+      </div>
     </section>
 
     <section>
       <h2>Dice Roller</h2>
-      
+
     </section>
 
 
     <section>
       <h2>Classes</h2>
-      <div id="slideshowContainer">
+      <div class="slideshowContainer">
+        <a class="prev" onclick="plusSlide(-1)">❮</a>
         <div class="innerSlideshowContainer">
 
           <article class="slide">
-            <h3>Arteficer</h3>
-            <img src="" alt="">
+            <h3>Artificer</h3>
+            <picture>
+              <source srcset="img/Artificer.webp" type="image/webp">
+              <img class="slideshowImage" src="img/Artificer.jpg" alt="Artificer">
+            </picture>
             <p></p>
           </article>
 
           <article class="slide">
             <h3>Barbarian</h3>
-            <img src="" alt="">
+            <picture>
+              <source srcset="img/Barbarian.webp" type="image/webp">
+              <img class="slideshowImage" src="img/Barbarian.jpg" alt="Barbarian">
+            </picture>
             <p></p>
           </article>
-          
+
           <article class="slide">
             <h3>Bard</h3>
-            <img src="" alt="">
+            <picture>
+              <source srcset="img/Bard.webp" type="image/webp">
+              <img class="slideshowImage" src="img/Bard.jpg" alt="Bard">
+            </picture>
             <p></p>
           </article>
-          
+
           <article class="slide">
             <h3>Cleric</h3>
-            <img src="" alt="">
+            <picture>
+              <source srcset="img/Cleric.webp" type="image/webp">
+              <img class="slideshowImage" src="img/Cleric.jpg" alt="Cleric">
+            </picture>
             <p></p>
           </article>
-          
+
           <article class="slide">
             <h3>Druid</h3>
-            <img src="" alt="">
+            <picture>
+              <source srcset="img/Druid.webp" type="image/webp">
+              <img class="slideshowImage" src="img/Druid.jpg" alt="Druid">
+            </picture>
             <p></p>
           </article>
-          
+
           <article class="slide">
             <h3>Fighter</h3>
-            <img src="" alt="">
+            <picture>
+              <source srcset="img/Fighter.webp" type="image/webp">
+              <img class="slideshowImage" src="img/Fighter.jpg" alt="Fighter">
+            </picture>
             <p></p>
           </article>
-          
+
           <article class="slide">
             <h3>Monk</h3>
-            <img src="" alt="">
+            <picture>
+              <source srcset="img/Monk.webp" type="image/webp">
+              <img class="slideshowImage" src="img/Monk.jpg" alt="Monk">
+            </picture>
             <p></p>
           </article>
-          
+
           <article class="slide">
             <h3>Paladin</h3>
-            <img src="" alt="">
+            <picture>
+              <source srcset="img/Paladin.webp" type="image/webp">
+              <img class="slideshowImage" src="img/Paladin.jpg" alt="Paladin">
+            </picture>
             <p></p>
           </article>
-          
+
           <article class="slide">
             <h3>Ranger</h3>
-            <img src="" alt="">
+            <picture>
+              <source srcset="img/Ranger.webp" type="image/webp">
+              <img class="slideshowImage" src="img/Ranger.jpg" alt="Ranger">
+            </picture>
             <p></p>
           </article>
-          
+
           <article class="slide">
             <h3>Rogue</h3>
-            <img src="" alt="">
+            <picture>
+              <source srcset="img/Rogue.webp" type="image/webp">
+              <img class="slideshowImage" src="img/Rogue.jpg" alt="Rogue">
+            </picture>
             <p></p>
           </article>
-          
+
           <article class="slide">
             <h3>Sorcerer</h3>
-            <img src="" alt="">
+            <picture>
+              <source srcset="img/Sorcerer.webp" type="image/webp">
+              <img class="slideshowImage" src="img/Sorcerer.jpg" alt="Sorcerer">
+            </picture>
             <p></p>
           </article>
-          
+
           <article class="slide">
             <h3>Warlock</h3>
-            <img src="" alt="">
+            <picture>
+              <source srcset="img/Warlock.webp" type="image/webp">
+              <img class="slideshowImage" src="img/Warlock.jpg" alt="Warlock">
+            </picture>
+            <p></p>
+          </article>
+
+          <article class="slide">
+            <h3>Wizard</h3>
+            <picture>
+              <source srcset="img/Wizard.webp" type="image/webp">
+              <img class="slideshowImage" src="img/Wizard.jpg" alt="Wizard">
+            </picture>
             <p></p>
           </article>
           
-          <article class="slide">
-            <h3>Wizard</h3>
-            <img src="" alt="">
-            <p></p>
-          </article>
         </div>
-        <a class="prev" onclick="plusSlide(-1)">❮</a>
         <a class="next" onclick="plusSlide(1)">❯</a>
       </div>
-      <div style="text-align:center">
-        <span class="dot" onclick="setSlide(1)"></span> 
-        <span class="dot" onclick="setSlide(2)"></span> 
+      <div class="dotContainer">
+        <span class="dot" onclick="setSlide(1)"></span>
+        <span class="dot" onclick="setSlide(2)"></span>
         <span class="dot" onclick="setSlide(3)"></span>
         <span class="dot" onclick="setSlide(4)"></span>
         <span class="dot" onclick="setSlide(5)"></span>
@@ -141,4 +187,5 @@
   </footer>
 
 </body>
+
 </html>
