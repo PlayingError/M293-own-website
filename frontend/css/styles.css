@@ -1,21 +1,47 @@
-
-
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: black;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+:root {
+  --text: black;
+  --background: #0b9790;
+  --border-color: #087670;
+  --hover: #0cb9b1;
 }
 
-.active, .dot:hover {
-  background-color:grey;
-  width:30px;
-  border-radius:7px;
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+}
+
+a:link {
+  color: var(--text);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--text);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+a:active {
+  color: var(--text);
+  text-decoration: none;
+}
+
+h3 {
+  font-size: 28px;
+  margin-bottom: 5px;
 }
 
 .video {
@@ -29,14 +55,35 @@ iframe.videocontent {
   border: none;
 }
 
+.dotContainer {
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #092d32;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #14626c;
+  width: 30px;
+  border-radius: 7px;
+}
 
 
 .slideshowContainer {
   width: 50%;
   margin: auto;
-  min-height: 400px;
+  min-height: 500px;
   display: grid;
-  grid-template-columns: 30px 1fr 30px; 
+  grid-template-columns: 30px 1fr 30px;
   grid-template-areas: "prev content next";
   align-items: center;
 }
@@ -45,6 +92,8 @@ iframe.videocontent {
 .innerSlideshowContainer {
   grid-area: content;
   width: 100%;
+  height: 100%;
+  padding: 10px;
 }
 
 .prev {
@@ -52,6 +101,7 @@ iframe.videocontent {
   height: 100%;
   font-size: 20px;
   align-items: center;
+  justify-content: center;
   display: flex;
   user-select: none;
 }
@@ -61,13 +111,142 @@ iframe.videocontent {
   height: 100%;
   font-size: 20px;
   align-items: center;
+  justify-content: center;
   display: flex;
   user-select: none;
 }
 
 
 .slideshowImage {
-  width:300px;
-  border-radius:5px;
-  margin:10px;
+  float: left;
+  width: 200px;
+  border-radius: 5px;
+  margin: 10px;
 }
+
+
+.usefullLinksContent {
+  display: flex;
+  justify-content: space-around;
+}
+
+.LinkDiv {
+  width: 100%;
+  max-width: 196px;
+  border-radius: 5px;
+  margin: 15px;
+}
+
+.LinkImage {
+  border-radius: 5px;
+  width: 100%;
+}
+
+.LinkText {
+  text-align: center;
+  font-size: 20px;
+}
+
+
+/*Formular*/
+
+.formSection {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: var(--text);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid var(--background);
+  border-radius: 5px;
+
+  &:focus {
+    outline: none;
+    border-color: var(--border-color);
+    background-color: #f9f0ff;
+  }
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+
+  legend {
+    font-weight: bold;
+    color: var(--border-color);
+    padding: 0 10px;
+  }
+
+  input[type="radio"],
+  label {
+    display: block;
+    width: auto;
+    margin-top: 0;
+  }
+
+  input[type="radio"] {
+    margin-right: 5px;
+    cursor: pointer;
+  }
+
+  label {
+    margin-right: 20px;
+    font-weight: normal;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--border-color);
+    }
+  }
+}
+
+.beginnerLabel {
+  display: inline-block;
+}
+
+.submitBtn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: var(--background);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:hover {
+    background-color: var(--hover);
+  }
+}
+
+
