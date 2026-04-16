@@ -4,9 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A Website about DND">
   <title>DND</title>
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/slideShow.js" defer></script>
+  <script src="js/burger.js" defer></script>
 </head>
 
 <body>
@@ -16,12 +18,20 @@
   </header>
 
   <nav>
-    <a href="pages/formular.html">formular</a>
-    <a href="#classes">classes</a>
-    <a href="#usefullLinks">Usefull Links</a>
+    <button class="burger" id="burger-menu" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav-links" id="nav-links">
+      <a href="pages/formular.html">formular</a>
+      <a href="#classes">classes</a>
+      <a href="#usefullLinks">Usefull Links</a>
+    </div>
   </nav>
 
-  <main>
+  <main class="home-main">
     <section class="videoSection">
       <h2>What is it</h2>
       <div class="video">
@@ -44,7 +54,7 @@
     <section id="classes" class="classSection">
       <h2>Classes</h2>
       <div class="slideshowContainer">
-        <a class="prev" onclick="plusSlide(-1)">❮</a>
+        <button type="button" class="prev" onclick="plusSlide(-1)" aria-label="Previous Slide">❮</button>
         <div class="innerSlideshowContainer">
 
           <article class="slide">
@@ -309,7 +319,7 @@
           </article>
 
         </div>
-        <a class="next" onclick="plusSlide(1)">❯</a>
+        <button type="button" class="next" onclick="plusSlide(1)" aria-label="Next Slide">❯</button>
       </div>
       <div class="dotContainer">
         <span class="dot" onclick="setSlide(1)"></span>
@@ -334,19 +344,19 @@
       <div class="usefullLinksContent">
         <a href="https://5e.tools/" target="_blank">
           <div class="LinkDiv">
-            <img class="LinkImage" src="img/5eTools.jpeg" alt="5eTools">
+            <img class="LinkImage" src="img/5eTools.jpeg" alt="5eTools Logo">
             <p class="LinkText">5eTools</p>
           </div>
         </a>
         <a href="https://www.legendkeeper.com/" target="_blank">
           <div class="LinkDiv">
-            <img class="LinkImage" src="img/LegendKeeper.jpg" alt="5eTools">
+            <img class="LinkImage" src="img/LegendKeeper.jpg" alt="LegendKeeper Logo">
             <p class="LinkText">LegendKeeper</p>
           </div>
         </a>
         <a href="https://anydice.com/" target="_blank">
           <div class="LinkDiv">
-            <img class="LinkImage" src="img/AnyDice.jpg" alt="5eTools">
+            <img class="LinkImage" src="img/AnyDice.jpg" alt="AnyDice Logo">
             <p class="LinkText">AnyDice</p>
           </div>
         </a>

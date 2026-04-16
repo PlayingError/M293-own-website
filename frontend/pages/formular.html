@@ -4,30 +4,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A Website about DND">
   <title>DND Formular</title>
   <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/burger.js" defer></script>
 </head>
 
 <body>
 
-    <header>
+  <header>
     <h1>DND Webseite</h1>
   </header>
 
   <nav>
-    <a href="pages/formular.html">formular</a>
-    <a href="#classes">classes</a>
-    <a href="#usefullLinks">Usefull Links</a>
-  </nav>
+    <button class="burger" id="burger-menu" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-  <section class="formSection">
-    <form action="https://gibm.becknet.ch/formular/formular.php" method="POST">
+    <div class="nav-links" id="nav-links">
+      <a href="../index.html">Home</a>
+    </div>
+  </nav>
+  <main>
+    <section class="formSection">
+      <form action="https://gibm.becknet.ch/formular/formular.php" method="POST">
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" placeholder="Name" required size="15" autofocus>
         <label for="email">E-Mail:</label>
         <input type="email" name="email" id="email" placeholder="email" required>
         <label for="pass">Password:</label>
-        <input type="password" id="pass" name="pw" pattern=".{8,}" title="At least 8 characters" placeholder="Password" required>
+        <input type="password" id="pass" name="pw" pattern=".{8,}" title="At least 8 characters" placeholder="Password"
+          required>
         <label for="tel">Telefon:</label>
         <input type="tel" name="tel" id="tel" placeholder="telefon">
         <input type="checkbox" name="beginner" id="beginner">
@@ -80,8 +89,9 @@
         <label for="startDate">prefered Start Date:</label>
         <input type="date" name="startDate" id="startDate" required>
         <button type="submit" class="submitBtn">Submit</button>
-    </form>
-  </section>
+      </form>
+    </section>
+  </main>
 
   <footer>
     <h2>Kontakt:</h2>

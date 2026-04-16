@@ -51,7 +51,17 @@ header {
 nav {
   display: flex;
   justify-content: space-around;
+  background-color: var(--border-color);
+}
+
+.nav-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
   padding: 20px;
+  a {
+    color: white;
+  }
 }
 
 footer {
@@ -59,17 +69,16 @@ footer {
   padding: 20px;
 }
 
-main  {
+.home-main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  grid-template-areas:  "video video sound sound"
-                        "video video sound sound"
-                        "slideshow slideshow slideshow slideshow"
-                        "links links links links"
-                      ;
+  grid-template-areas: "video sound"
+    "video sound"
+    "slideshow slideshow"
+    "links links"
+  ;
 }
-
 
 
 .videoSection {
@@ -155,6 +164,8 @@ iframe.videocontent {
   justify-content: center;
   display: flex;
   user-select: none;
+  background-color: var(--background);
+  border: none;
 }
 
 .next {
@@ -165,6 +176,8 @@ iframe.videocontent {
   justify-content: center;
   display: flex;
   user-select: none;
+  background-color: var(--background);
+  border: none;
 }
 
 
@@ -284,7 +297,7 @@ fieldset {
   margin-top: 20px;
   width: 100%;
   padding: 12px;
-  background-color: var(--background);
+  background-color: var(--border-color);
   color: white;
   border: none;
   border-radius: 5px;
@@ -300,4 +313,79 @@ fieldset {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .home-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "video"
+      "sound"
+      "slideshow"
+      "links"
+    ;
+  }
 
+}
+
+
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    display: flex;
+    justify-content: flex-end; 
+    padding: 20px;
+  }
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text);
+    transition: 0.3s;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed; 
+    justify-content: flex-start;
+    top: 0;
+    right: -100%; 
+    width: 70%; 
+    height: 100vh;
+    background-color: var(--border-color);
+    padding-top: 80px;
+    transition: 0.4s ease-in-out;
+    z-index: 90;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-links a {
+    padding: 20px;
+    color: white;
+    font-size: 1.2rem;
+  }
+
+  /* Simple X animation for the burger */
+  .burger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .burger.open span:nth-child(2) { opacity: 0; }
+  .burger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
